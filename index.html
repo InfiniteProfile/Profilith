@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0d">
+<meta name="description" content="Profilith: an endless, deterministic profile universe. There is no final profile.">
+<title>Profilith — There is no final profile</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<header class="bar">
+  <a class="brand" href="./" aria-label="Profilith home">Profilith</a>
+  <button id="random" class="btn" type="button">Random</button>
+  <form id="search" role="search" novalidate>
+    <label class="sr" for="q">Profile number</label>
+    <input id="q" class="btn" type="text" autocomplete="off" spellcheck="false" maxlength="80" placeholder="Profile number, e.g. 777777777">
+    <button class="btn" type="submit">Open</button>
+  </form>
+</header>
+<p id="msg" class="msg" role="alert"></p>
+<main><div id="feed" aria-label="Endless profile stream"></div></main>
+
+<dialog id="viewer" aria-labelledby="vTitle">
+  <div class="vbox">
+    <button id="vClose" class="btn icon" type="button" aria-label="Close profile">✕</button>
+    <div id="vAvatar" class="vavatar"></div>
+    <p class="tag">Profilith</p>
+    <h2 id="vTitle"></h2>
+    <dl id="vTraits"></dl>
+    <div class="vnav">
+      <button id="vPrev" class="btn" type="button">Previous</button>
+      <button id="vShare" class="btn" type="button">Share</button>
+      <button id="vNext" class="btn" type="button">Next</button>
+    </div>
+  </div>
+</dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
